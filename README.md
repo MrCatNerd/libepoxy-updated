@@ -7,7 +7,7 @@
 Epoxy is a library for handling OpenGL function pointer management for
 you.
 
-this fork is made specifically for [xab](github.com/MrCatNerd/xab), use at your own risk!
+this fork is made specifically for [xab](https://github.com/MrCatNerd/xab), use at your own risk!
 
 changes:
 - updated registry
