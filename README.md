@@ -7,6 +7,14 @@
 Epoxy is a library for handling OpenGL function pointer management for
 you.
 
+this fork is made specifically for [xab](github.com/MrCatNerd/xab), use at your own risk!
+
+changes:
+- updated registry
+- registry update script (./registry/update_registry.py)
+- merged some random prs that looked good to me cuz why not
+- also i changed the name of the project to libepoxy-updated to not interfere with existing libepoxy installations
+
 It hides the complexity of `dlopen()`, `dlsym()`, `glXGetProcAddress()`,
 `eglGetProcAddress()`, etc. from the app developer, with very little
 knowledge needed on their part.  They get to read GL specs and write
@@ -43,7 +51,7 @@ Dependencies for Debian:
   * meson
   * libegl1-mesa-dev
 
-Dependencies for macOS (using MacPorts): 
+Dependencies for macOS (using MacPorts):
 
   * pkgconfig
   * meson
