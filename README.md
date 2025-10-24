@@ -4,7 +4,7 @@
 ![MSYS2 Build](https://github.com/anholt/libepoxy/workflows/MSYS2%20Build/badge.svg)
 [![License: MIT](https://img.shields.io/badge/license-MIT-brightgreen.svg)](https://opensource.org/licenses/MIT)
 
-# About this fork
+## About this fork
 this fork is made specifically for [xab](https://github.com/MrCatNerd/xab), use at your own risk!
 
 changes:
