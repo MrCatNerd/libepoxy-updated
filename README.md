@@ -4,9 +4,7 @@
 ![MSYS2 Build](https://github.com/anholt/libepoxy/workflows/MSYS2%20Build/badge.svg)
 [![License: MIT](https://img.shields.io/badge/license-MIT-brightgreen.svg)](https://opensource.org/licenses/MIT)
 
-Epoxy is a library for handling OpenGL function pointer management for
-you.
-
+# About this fork
 this fork is made specifically for [xab](https://github.com/MrCatNerd/xab), use at your own risk!
 
 changes:
@@ -14,6 +12,11 @@ changes:
 - registry update script (./registry/update_registry.py)
 - merged some random prs that looked good to me cuz why not
 - also i changed the name of the project to libepoxy-updated to not interfere with existing libepoxy installations
+
+---
+
+Epoxy is a library for handling OpenGL function pointer management for
+you.
 
 It hides the complexity of `dlopen()`, `dlsym()`, `glXGetProcAddress()`,
 `eglGetProcAddress()`, etc. from the app developer, with very little
