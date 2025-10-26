@@ -27,3 +27,5 @@ for link, file in REGISTRY_LINKS.items():
     response.raise_for_status()
     with open(file, "wb") as f:
         f.write(response.content)
+
+print("registry updated")
