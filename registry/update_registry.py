@@ -1,6 +1,6 @@
 #!/bin/env python3
 
-import requests, os
+import aiohttp, asyncio, os
 from pathlib import Path
 
 old: str = "old"
@@ -22,10 +22,24 @@ for file in REGISTRY_LINKS.values():
 
 
 # fetch the new files
-for link, file in REGISTRY_LINKS.items():
-    response = requests.get(link)
-    response.raise_for_status()
-    with open(file, "wb") as f:
-        f.write(response.content)
+async def update_registry(session, link, file):
+    async with session.get(link) as response:
+        response.raise_for_status()
+        content = await response.read()
+        with open(file, "wb") as f:
+            f.write(content)
+
+
+async def main():
+    async with aiohttp.ClientSession() as session:
+        await asyncio.gather(
+            *[
+                update_registry(session, link, file)
+                for link, file in REGISTRY_LINKS.items()
+            ]
+        )
+
+
+asyncio.run(main())
 
 print("registry updated")
